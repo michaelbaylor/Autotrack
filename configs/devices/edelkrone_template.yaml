@@ -1,0 +1,38 @@
+# Edelkrone camera head configuration template
+type: edelkrone
+
+# Edelkrone hub network address
+ip: "192.168.1.50"
+port: 80
+
+# Wireless link IDs (shown in the Edelkrone app under each linked bundle)
+ptz_link_id: "207138435631"
+focus_link_id: "204238735631"
+
+# Module MAC addresses (printed on each Edelkrone device)
+head_module_mac: "1C:9D:C2:D6:FF:1E"
+zoom_module_mac:  "8C:4B:14:00:FF:DA"   # omit or leave blank if no zoom servo
+focus_module_mac: "8C:4B:14:04:BA:82"   # omit or leave blank if no focus module
+
+# Local video capture device fed by the camera (HDMI/USB capture card)
+# Use an integer string for a device index (e.g. "0") or a path (e.g. "/dev/video0")
+video_device: "0"
+
+# Zoom servo range (encoder counts; 0 = wide, zoom_max = tele)
+zoom_min: 0
+zoom_max: 9999
+
+# Focus module range
+focus_min: 0
+focus_max: 9999
+
+# PID controller gains for tracking
+pid_x_p: 0.03
+pid_x_i: 0.01
+pid_x_d: 0.005
+pid_y_p: 0.03
+pid_y_i: 0.01
+pid_y_d: 0.005
+
+# Auto-zoom heuristic coefficient
+zoom_coefficient: 300.0
